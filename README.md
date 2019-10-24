@@ -1,4 +1,4 @@
-# todo
+# To Do
 
 Application for To Do Tasks
 
