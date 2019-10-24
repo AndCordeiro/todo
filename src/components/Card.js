@@ -91,7 +91,7 @@ Card.defaultProps = {
     },
     containerBody: {
         paddingHorizontal: 20,
-        paddingTop: 10
+        padding: 10
     },
     titleStyle: {
         color: 'white',

@@ -1,5 +1,6 @@
 import {
     ADD_TASK,
+    ADD_TASK_DOING,
     DELETE_TASK,
     SET_LAST_ID
 } from './types';
@@ -22,6 +23,11 @@ export const addTask = ({ title, description }) => (dispatch, getState) => new P
     dispatch({ type: SET_LAST_ID, payload: id });
     resolve();
 });
+
+export const addTaskDoing = ({ item }) => (dispatch) => {
+    dispatch({ type: ADD_TASK_DOING, payload: item });
+    dispatch({ type: DELETE_TASK, payload: item.id });
+};
 
 export const deleteTask = (id) => (dispatch) => {
     dispatch({ type: DELETE_TASK, payload: id });
